@@ -39,3 +39,32 @@
   </div>
 </div>
 
+<script>
+  const inputExposure = document.querySelector('#exposure');
+  const inputContrast = document.querySelector('#contrast');
+  const inputSaturation = document.querySelector('#saturation');
+  const inputTemperature = document.querySelector('#temperature');
+  const inputTint = document.querySelector('#tint');
+  const inputHighlights = document.querySelector('#highlights');
+  const inputShadows = document.querySelector('#shadows');
+
+  [inputExposure, inputContrast, inputSaturation, inputTemperature, inputTint, inputHighlights, inputShadows].forEach(filterInput => {
+    filterInput.addEventListener('input', (event) => {
+      if (!event.target.value || event.target.value < -1 || event.target.value > 1) {
+        return
+      }
+
+      const newFilterValues = {
+        exposure: inputExposure.value,
+        contrast: inputContrast.value,
+        saturation: inputSaturation.value,
+        temperature: inputTemperature.value,
+        tint: inputTint.value,
+        highlights: inputHighlights.value,
+        shadows: inputShadows.value
+      }
+
+      parent.postMessage({ pluginMessage: newFilterValues }, '*')
+    })
+  })
+</script>
