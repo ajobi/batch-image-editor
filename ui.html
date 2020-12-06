@@ -55,13 +55,13 @@
       }
 
       const newFilterValues = {
-        exposure: inputExposure.value,
-        contrast: inputContrast.value,
-        saturation: inputSaturation.value,
-        temperature: inputTemperature.value,
-        tint: inputTint.value,
-        highlights: inputHighlights.value,
-        shadows: inputShadows.value
+        exposure: parseFloat(inputExposure.value),
+        contrast: parseFloat(inputContrast.value),
+        saturation: parseFloat(inputSaturation.value),
+        temperature: parseFloat(inputTemperature.value),
+        tint: parseFloat(inputTint.value),
+        highlights: parseFloat(inputHighlights.value),
+        shadows: parseFloat(inputShadows.value)
       }
 
       parent.postMessage({ pluginMessage: newFilterValues }, '*')
