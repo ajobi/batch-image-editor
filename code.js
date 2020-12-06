@@ -1,1 +1,3 @@
-figma.closePlugin()
+figma.showUI(__html__)
+
+// figma.closePlugin()
