@@ -1,4 +1,4 @@
-figma.showUI(__html__)
+figma.showUI(__html__, { height: 250 })
 
 figma.ui.onmessage = (filterValues) => {
   for (const node of figma.currentPage.selection) {
