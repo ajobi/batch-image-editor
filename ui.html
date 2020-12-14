@@ -30,31 +30,38 @@
 <div>
   <div class="input-field">
     <label for="exposure">Exposure</label>
-    <input type="range" min="-1" max="1" id="exposure" value="0" step="0.01"/>
+    <input type="range" min="-1" max="1" id="exposure" value="0" step="0.01" oninput="exposureOut.value = this.value"/>
+    <output id="exposureOut">0</output>
   </div>
   <div class="input-field">
-    <label for="exposure">Contrast</label>
-    <input type="range" min="-1" max="1" id="contrast" value="0" step="0.01"/>
+    <label for="contrast">Contrast</label>
+    <input type="range" min="-1" max="1" id="contrast" value="0" step="0.01" oninput="contrastOut.value = this.value"/>
+    <output id="contrastOut">0</output>
   </div>
   <div class="input-field">
-    <label for="exposure">Saturation</label>
-    <input type="range" min="-1" max="1" id="saturation" value="0" step="0.01"/>
+    <label for="saturation">Saturation</label>
+    <input type="range" min="-1" max="1" id="saturation" value="0" step="0.01" oninput="saturationOut.value = this.value"/>
+    <output id="saturationOut">0</output>
   </div>
   <div class="input-field">
-    <label for="exposure">Temperature</label>
-    <input type="range" min="-1" max="1" id="temperature" value="0" step="0.01"/>
+    <label for="temperature">Temperature</label>
+    <input type="range" min="-1" max="1" id="temperature" value="0" step="0.01" oninput="temperatureOut.value = this.value"/>
+    <output id="temperatureOut">0</output>
   </div>
   <div class="input-field">
-    <label for="exposure">Tint</label>
-    <input type="range" min="-1" max="1" id="tint" value="0" step="0.01"/>
+    <label for="tint">Tint</label>
+    <input type="range" min="-1" max="1" id="tint" value="0" step="0.01" oninput="tintOut.value = this.value"/>
+    <output id="tintOut">0</output>
   </div>
   <div class="input-field">
-    <label for="exposure">Highlights</label>
-    <input type="range" min="-1" max="1" id="highlights" value="0" step="0.01"/>
+    <label for="highlights">Highlights</label>
+    <input type="range" min="-1" max="1" id="highlights" value="0" step="0.01" oninput="highlightsOut.value = this.value"/>
+    <output id="highlightsOut">0</output>
   </div>
   <div class="input-field">
-    <label for="exposure">Shadows</label>
-    <input type="range" min="-1" max="1" id="shadows" value="0" step="0.01"/>
+    <label for="shadows">Shadows</label>
+    <input type="range" min="-1" max="1" id="shadows" value="0" step="0.01" oninput="shadowsOut.value = this.value"/>
+    <output id="shadowsOut">0</output>
   </div>
 </div>
 
