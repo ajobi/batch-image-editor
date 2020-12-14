@@ -21,14 +21,24 @@
   }
 
   output {
-    width: 40px;
-    text-align: center;
+    width: 30px;
+    margin-left: 10px;
   }
 
   input {
     height: 1px;
     background-color: #050505;
     opacity: 0.3;
+  }
+
+  input::-webkit-slider-runnable-track {
+    height: 25px;
+  }
+
+  input::-webkit-slider-thumb {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
   }
 </style>
 
