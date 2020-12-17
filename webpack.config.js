@@ -2,9 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
 const path = require('path')
 
-module.exports = (env, argv) => ({
-  mode: 'production',
-  devtool: false,
+module.exports = {
   entry: {
     ui: './src/ui.js',
     code: './src/code.js'
@@ -26,7 +24,7 @@ module.exports = (env, argv) => ({
       chunks: ['ui'],
     }),
     new ScriptExtHtmlWebpackPlugin({
-      inline: [/\.js$/],
+      inline: [/ui\.js$/],
     }),
   ]
-})
+}
