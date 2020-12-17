@@ -13,6 +13,11 @@ module.exports = (env, argv) => ({
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
   },
+  module: {
+    rules: [
+      { test: /\.css$/, use: ['style-loader', { loader: 'css-loader' }] },
+    ],
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/ui.html',

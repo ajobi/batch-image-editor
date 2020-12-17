@@ -1,3 +1,5 @@
+import './ui.css'
+
 const inputExposure = document.querySelector('#exposure');
 const inputContrast = document.querySelector('#contrast');
 const inputSaturation = document.querySelector('#saturation');
