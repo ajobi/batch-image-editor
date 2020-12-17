@@ -1,6 +1,9 @@
 {
   "name": "batch-image-editor",
   "version": "1.0.0-alpha.0",
+  "scripts": {
+    "build": "webpack"
+  },
   "devDependencies": {
     "webpack": "^5.10.3",
     "webpack-cli": "^4.2.0"
