@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
-const path = require('path');
+const RemovePlugin = require('remove-files-webpack-plugin')
+const path = require('path')
 
 module.exports = (env, argv) => ({
   mode: 'production',
@@ -27,5 +28,13 @@ module.exports = (env, argv) => ({
     }),
     new ScriptExtHtmlWebpackPlugin({
       inline: [/\.js$/],
-    })  ]
+    }),
+    new RemovePlugin({
+      after: {
+        include: [
+          './dist/ui.js'
+        ]
+      }
+    })
+  ]
 })
