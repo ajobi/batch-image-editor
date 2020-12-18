@@ -2,7 +2,8 @@
   "name": "batch-image-editor",
   "version": "1.0.0-alpha.0",
   "scripts": {
-    "build": "webpack"
+    "build:prod": "webpack --env production",
+    "build:dev": "webpack --env development"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^7.0.0",

@@ -3,7 +3,8 @@ const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
 const CopyPlugin = require("copy-webpack-plugin")
 const path = require('path')
 
-module.exports = {
+module.exports = env => ({
+  mode: env.production ? 'production' : 'development',
   entry: {
     ui: './src/ui.js',
     code: './src/code.js'
@@ -33,4 +34,4 @@ module.exports = {
       ],
     }),
   ]
-}
+})
