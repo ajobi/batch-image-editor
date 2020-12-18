@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
+const CopyPlugin = require("copy-webpack-plugin")
 const path = require('path')
 
 module.exports = {
@@ -25,6 +26,11 @@ module.exports = {
     }),
     new ScriptExtHtmlWebpackPlugin({
       inline: [/ui\.js$/],
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: "manifest.json", to: "manifest.json" },
+      ],
     }),
   ]
 }
