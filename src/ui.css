@@ -54,6 +54,7 @@ input[type=range]:focus {
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   position: relative;
+  z-index: 10;
   top: 50%;
   transform: translateY(-50%);
   height: 9px;
@@ -64,12 +65,22 @@ input[type=range]::-webkit-slider-thumb {
  }
 
 input[type=range]::-moz-range-thumb {
+  position: relative;
+  z-index: 10;
   height: 9px;
   width: 9px;
   border-radius: 100%;
   background: #050505;
   cursor: pointer;
   border: none;
+}
+
+input[type=range]:focus::-webkit-slider-thumb {
+  background: #18A0fB;
+}
+
+input[type=range]:focus::-moz-range-thumb {
+  background: #18A0fB;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
