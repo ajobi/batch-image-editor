@@ -1,55 +1,3 @@
-body {
-  --input-marker-exposure-left: 0;
-  --input-marker-contrast-left: 0;
-  --input-marker-saturation-left: 0;
-  --input-marker-temperature-left: 0;
-  --input-marker-tint-left: 0;
-  --input-marker-highlights-left: 0;
-  --input-marker-shadows-left: 0;
-  --input-marker-exposure-width: 0;
-  --input-marker-contrast-width: 0;
-  --input-marker-saturation-width: 0;
-  --input-marker-temperature-width: 0;
-  --input-marker-tint-width: 0;
-  --input-marker-highlights-width: 0;
-  --input-marker-shadows-width: 0;
-}
-
-.input-field:nth-child(1) input[type=range]::before {
-  transform: translateX(var(--input-marker-exposure-left));
-  width: var(--input-marker-exposure-width);
-}
-
-.input-field:nth-child(2) input[type=range]::before {
-  transform: translateX(var(--input-marker-contrast-left));
-  width: var(--input-marker-contrast-width);
-}
-
-.input-field:nth-child(3) input[type=range]::before {
-  transform: translateX(var(--input-marker-saturation-left));
-  width: var(--input-marker-saturation-width);
-}
-
-.input-field:nth-child(4) input[type=range]::before {
-  transform: translateX(var(--input-marker-temperature-left));
-  width: var(--input-marker-temperature-width);
-}
-
-.input-field:nth-child(5) input[type=range]::before {
-  transform: translateX(var(--input-marker-tint-left));
-  width: var(--input-marker-tint-width);
-}
-
-.input-field:nth-child(6) input[type=range]::before {
-  transform: translateX(var(--input-marker-highlights-left));
-  width: var(--input-marker-highlights-width);
-}
-
-.input-field:nth-child(7) input[type=range]::before {
-  transform: translateX(var(--input-marker-shadows-left));
-  width: var(--input-marker-shadows-width);
-}
-
 * {
   color: rgba(0,0,0,.8);
   font-family: Inter, sans-serif;
@@ -60,6 +8,19 @@ body {
   display: flex;
   align-items: center;
   margin: 5px 8px 0;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-marker {
+  background-color: #050505;
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 50%;
+  width: 0;
+  height: 1px;
 }
 
 label, input {
@@ -84,15 +45,6 @@ input[type=range] {
   position: relative;
   width: 130px;
   height: 25px;
-}
-
-input[type=range]::before {
-  content: "";
-  position: absolute;
-  background-color: #050505;
-  height: 1px;
-  top: calc(50% - 1px);
-  left: 50%;
 }
 
 input[type=range]:focus {
