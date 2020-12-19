@@ -1,3 +1,55 @@
+body {
+  --input-marker-exposure-left: 50%;
+  --input-marker-contrast-left: 50%;
+  --input-marker-saturation-left: 50%;
+  --input-marker-temperature-left: 50%;
+  --input-marker-tint-left: 50%;
+  --input-marker-highlights-left: 50%;
+  --input-marker-shadows-left: 50%;
+  --input-marker-exposure-width: 0;
+  --input-marker-contrast-width: 0;
+  --input-marker-saturation-width: 0;
+  --input-marker-temperature-width: 0;
+  --input-marker-tint-width: 0;
+  --input-marker-highlights-width: 0;
+  --input-marker-shadows-width: 0;
+}
+
+.input-field:nth-child(1) input[type=range]::before {
+  left: var(--input-marker-exposure-left);
+  width: var(--input-marker-exposure-width);
+}
+
+.input-field:nth-child(2) input[type=range]::before {
+  left: var(--input-marker-contrast-left);
+  width: var(--input-marker-contrast-width);
+}
+
+.input-field:nth-child(3) input[type=range]::before {
+  left: var(--input-marker-saturation-left);
+  width: var(--input-marker-saturation-width);
+}
+
+.input-field:nth-child(4) input[type=range]::before {
+  left: var(--input-marker-temperature-left);
+  width: var(--input-marker-temperature-width);
+}
+
+.input-field:nth-child(5) input[type=range]::before {
+  left: var(--input-marker-tint-left);
+  width: var(--input-marker-tint-width);
+}
+
+.input-field:nth-child(6) input[type=range]::before {
+  left: var(--input-marker-highlights-left);
+  width: var(--input-marker-highlights-width);
+}
+
+.input-field:nth-child(7) input[type=range]::before {
+  left: var(--input-marker-shadows-left);
+  width: var(--input-marker-shadows-width);
+}
+
 * {
   color: rgba(0,0,0,.8);
   font-family: Inter, sans-serif;
@@ -29,8 +81,17 @@ output:active {
 input[type=range] {
   -webkit-appearance: none;
   background: transparent;
+  position: relative;
   width: 130px;
   height: 25px;
+}
+
+input[type=range]::before {
+  content: "";
+  position: absolute;
+  background-color: #828282;
+  height: 1px;
+  top: calc(50% - 1px);
 }
 
 input[type=range]:focus {
@@ -73,5 +134,5 @@ input[type=range]::-moz-range-track {
 }
 
 input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #828282;
+  /*background: #828282;*/
 }
