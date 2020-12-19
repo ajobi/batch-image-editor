@@ -7,7 +7,7 @@
 .input-field {
   display: flex;
   align-items: center;
-  margin: 20px 8px;
+  margin: 20px 8px 0;
 }
 
 label, input {
@@ -28,8 +28,9 @@ output:active {
 
 input[type=range] {
   -webkit-appearance: none;
-  width: 100%;
   background: transparent;
+  width: 130px;
+  height: 10px;
 }
 
 input[type=range]:focus {
@@ -54,6 +55,7 @@ input[type=range]::-moz-range-thumb {
   border-radius: 100%;
   background: #050505;
   cursor: pointer;
+  border: none;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
