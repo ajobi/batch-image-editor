@@ -1,6 +1,8 @@
 {
   "name": "batch-image-editor",
   "version": "1.0.0-alpha.0",
+  "author": "Andrej Bilec <andrej.bilec@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "build:prod": "webpack --env production",
     "build:dev": "webpack --env development"
