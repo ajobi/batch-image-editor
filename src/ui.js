@@ -21,14 +21,13 @@ const postNewValues = () => {
 }
 
 [inputExposure, inputContrast, inputSaturation, inputTemperature, inputTint, inputHighlights, inputShadows].forEach(filterInput => {
-  const inputWidth = filterInput.style.width
   const outputElement = document.querySelector(`#${filterInput.id}Out`)
 
   outputElement.addEventListener('click', () => {
     outputElement.value = 0
     outputElement.style.left = '0'
     filterInput.value = 0
-    document.body.style.setProperty(`--input-marker-${filterInput.id}-left`, '50%')
+    document.body.style.setProperty(`--input-marker-${filterInput.id}-left`, '0')
     document.body.style.setProperty(`--input-marker-${filterInput.id}-width`, '0')
     postNewValues()
   })
@@ -37,8 +36,9 @@ const postNewValues = () => {
     const { value } = event.target
     outputElement.value = value
     outputElement.style.left = value < 0 ? '-3.8px': '0'
-    document.body.style.setProperty(`--input-marker-${filterInput.id}-left`, '50%')
-    document.body.style.setProperty(`--input-marker-${filterInput.id}-width`, `calc((130px / 2) * ${Math.abs(value)})`)
+    const markerWidth = (130 / 2) * Math.abs(value)
+    document.body.style.setProperty(`--input-marker-${filterInput.id}-left`, value < 0 ? `-${markerWidth}px` : '0')
+    document.body.style.setProperty(`--input-marker-${filterInput.id}-width`, `${markerWidth}px`)
     postNewValues()
   })
 })
