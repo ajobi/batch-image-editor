@@ -7,7 +7,7 @@
 .input-field {
   display: flex;
   align-items: center;
-  margin: 20px 8px 0;
+  margin: 5px 8px 0;
 }
 
 label, input {
@@ -30,7 +30,7 @@ input[type=range] {
   -webkit-appearance: none;
   background: transparent;
   width: 130px;
-  height: 10px;
+  height: 25px;
 }
 
 input[type=range]:focus {
