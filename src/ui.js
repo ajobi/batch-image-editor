@@ -42,5 +42,6 @@ const postNewValues = () => {
     inputMarker.style.transform = value < 0 ? `translateX(-${markerWidth}px)` : 'translateX(0)'
     inputMarker.style.width = `${markerWidth}px`
     postNewValues()
+    filterInput.focus()
   })
 })
