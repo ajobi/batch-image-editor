@@ -31,6 +31,7 @@ const postNewValues = () => {
     inputMarker.style.transform = 'translateX(0)'
     inputMarker.style.width = `0`
     postNewValues()
+    filterInput.focus()
   })
 
   filterInput.addEventListener('input', event => {
